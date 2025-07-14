@@ -13,11 +13,11 @@ metrics.info('app_info', 'A simple Flask application for monitoring demo')
 def main():
     return "Welcome to the Monitoring Demo App!"
 
-@app.route('/slow'):
-    def slow_response():
-        delay = random.uniform(0.5, 1.5)
-        time.sleep(delay)
-        return f"This was a slow response, took {delay:.2f} seconds."
+@app.route('/slow')
+def slow_response():
+    delay = random.uniform(0.5, 1.5)
+    time.sleep(delay)
+    return f"This was a slow response, took {delay:.2f} seconds."
 
 @app.route('/error')
 def error_route():
